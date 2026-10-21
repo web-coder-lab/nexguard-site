@@ -1,0 +1,50 @@
+[
+ {
+  "id": "home",
+  "file": "01-home",
+  "title": "Home",
+  "caption": "Monitoring status, notification access and battery policy at a glance."
+ },
+ {
+  "id": "diagnostics",
+  "file": "02-diagnostics",
+  "title": "Diagnostics",
+  "caption": "Diagnostic results, with a button that opens the phone's own settings."
+ },
+ {
+  "id": "permissions",
+  "file": "03-permissions",
+  "title": "Permission setup",
+  "caption": "Grant notification access and see what each permission is for."
+ },
+ {
+  "id": "privacy",
+  "file": "04-privacy",
+  "title": "Privacy and apps",
+  "caption": "Metadata-only history by default, and per-app monitoring rules."
+ },
+ {
+  "id": "appearance",
+  "file": "05-appearance",
+  "title": "Appearance and language",
+  "caption": "Theme, reduced motion, haptics and app language."
+ },
+ {
+  "id": "battery",
+  "file": "06-battery",
+  "title": "Battery guidance",
+  "caption": "Brand-specific guidance, shown here for OPPO ColorOS."
+ },
+ {
+  "id": "about",
+  "file": "07-about",
+  "title": "About",
+  "caption": "Version, source code link, license and open-source libraries."
+ },
+ {
+  "id": "language",
+  "file": "08-language",
+  "title": "First launch",
+  "caption": "Choose your language when you open the app for the first time."
+ }
+]

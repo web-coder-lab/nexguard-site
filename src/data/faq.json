@@ -1,0 +1,9 @@
+[
+["Does NEXGUARD stop my phone from killing apps?","No. Android does not allow a normal app to do that. NEXGUARD shows what is happening and guides you to settings you can change yourself."],
+["Does it bring back missed messages?","No. It records events Android delivers to it. If a message never reached your phone, there is nothing to recover."],
+["Does it show every notification?","It keeps a history of events for the apps you choose. By default it stores the app, the time and the event type. The full message text is not stored."],
+["Will it run after I restart my phone?","Android reconnects apps that have notification access, and NEXGUARD schedules its checks again. Exact timing is up to Android."],
+["Does it send my data anywhere?","The app does not request the internet permission, so it cannot send history out. See the Security page for the full permission list."],
+["Why does Android warn me when I install?","The app comes as a file, not from an app store. Compare the signing certificate fingerprint on the Download page before you install."],
+["Is it free?","Yes, free and open source under GPL-3.0-only."]
+]

@@ -1,0 +1,7 @@
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,64px);align-items:center;max-width:var(--w);margin:0 auto;padding:clamp(40px,7vw,88px) 22px}
+.hero .tl{margin-bottom:18px}
+@media(max-width:860px){.hero{grid-template-columns:1fr}}
+.phones{position:relative;min-height:min(560px,120vw);display:flex;justify-content:center;align-items:center;transition:transform .2s}
+.phones .frame{position:absolute;width:min(250px,56%);cursor:default;box-shadow:0 30px 70px -26px #000c}.phones .frame:hover{transform:none;border-color:#1d2a26}
+.phones .ph1{transform:translateX(18%) rotate(4deg);z-index:2}.phones .ph2{transform:translateX(-30%) rotate(-5deg) translateY(4%)}
+@media(max-width:860px){.phones{min-height:min(520px,125vw)}}

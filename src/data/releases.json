@@ -1,0 +1,38 @@
+[
+ {
+  "v": "1.0.3",
+  "date": "20 October 2026",
+  "notes": [
+   "Settings footer shows NEXGUARD and the real version number.",
+   "The English interface uses monitoring wording instead of protection wording.",
+   "25 language options. All text is translated, but the translations are machine-generated and not yet reviewed by native speakers.",
+   "New installs monitor user-installed apps by default; system apps start excluded. Existing choices are not overwritten.",
+   "Backup and device-transfer rules exclude the notification database and preferences.",
+   "An About section shows the version, source link and license.",
+   "The unused FOREGROUND_SERVICE permission was removed. The app does not start a foreground service."
+  ]
+ },
+ {
+  "v": "1.0.2",
+  "date": "18 October 2026",
+  "notes": [
+   "Namespace cleanup.",
+   "Unused Google Services and Firebase catalog entries removed."
+  ]
+ },
+ {
+  "v": "1.0.1",
+  "date": "",
+  "notes": [
+   "Package name finalized.",
+   "Signed release published."
+  ]
+ },
+ {
+  "v": "1.0.0",
+  "date": "",
+  "notes": [
+   "First signed release."
+  ]
+ }
+]

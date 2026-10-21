@@ -1,0 +1,1 @@
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches)document.querySelectorAll("[data-kinetic]").forEach(h=>{h.setAttribute("aria-label",h.textContent);h.innerHTML=h.textContent.split(" ").map((w,i)=>`<span class="wd" aria-hidden="true" style="animation-delay:${i*90}ms">${w}</span>`).join(" ")});

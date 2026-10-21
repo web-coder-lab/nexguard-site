@@ -1,0 +1,19 @@
+title: Source code | NEXGUARD
+desc: Browse and download the NEXGUARD source code, read the README, changelog and security policy, and see how to build it.
+path: /source/
+css: source
+---
+<div class="w"><div class="repo-h"><img src="/assets/img/icon-192.png" alt="" width="64" height="64"><div><p class="crumb" style="margin:0"><a href="/">Home</a> / Source code</p><h1>web-coder-lab / nexguard</h1></div></div>
+<p class="lead" style="margin-top:0">On-device notification health monitor for Android. Free and open source.</p>
+<div class="badges"><span>{{icon:scale}} GPL-3.0-only</span><span>{{icon:tag}} {{tag}}</span><span>{{icon:folder}} {{fileCount}} files</span><span>{{icon:lock}} No internet permission</span></div>
+<div class="clone"><input id="cl" readonly value="git clone {{cloneUrl}}" aria-label="Clone command"><button class="btn sm" data-copy="git clone {{cloneUrl}}">{{icon:copy}} Copy</button></div><span class="note" id="copy-status" role="status"></span>
+<div class="dls"><a class="btn ghost" href="{{zipUrl}}">{{icon:archive}} Download zip</a><a class="btn ghost" href="{{tarUrl}}">{{icon:archive}} Download tar.gz</a><a class="btn ghost" href="{{repo}}">{{icon:external}} Open on GitHub</a><a class="btn ghost" href="{{repo}}/issues">{{icon:info}} Issues</a></div>
+<div class="tabs" role="tablist" aria-label="Repository"><button role="tab" aria-selected="true" data-tab="readme">README</button><button role="tab" aria-selected="false" data-tab="changelog">Changelog</button><button role="tab" aria-selected="false" data-tab="security">Security</button><button role="tab" aria-selected="false" data-tab="files">Files</button></div>
+<div class="tp md" id="readme" role="tabpanel">{{readmeHtml}}</div>
+<div class="tp md" id="changelog" role="tabpanel">{{changelogHtml}}</div>
+<div class="tp md" id="security" role="tabpanel">{{securityMd}}</div>
+<div class="tp" id="files" role="tabpanel"><p class="note">The tree is a snapshot of {{tag}}. Each file opens on GitHub.</p>{{fileTree}}</div>
+<div class="split" style="margin-top:40px"><div><h2>Build from source</h2></div><div class="prose"><p>You need JDK 17, the Android SDK (platform 36) and the Gradle wrapper that is already in the repository.</p><pre class="md"><code>git clone {{cloneUrl}}
+cd nexguard
+chmod +x ./gradlew
+./gradlew test lint assembleRelease</code></pre><p class="note">A signed release also needs KEYSTORE_PATH, KEYSTORE_PASSWORD, KEY_ALIAS and KEY_PASSWORD as environment variables. Never commit a keystore.</p></div></div></div>

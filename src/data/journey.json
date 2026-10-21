@@ -1,0 +1,7 @@
+[
+["Sender's server","The sender's app asks a push service to deliver a message.","No. This happens before anything reaches your phone.","Nothing. If a gap appears, the delay may be here, but NEXGUARD cannot tell."],
+["Push service and network","The push service forwards the message once your phone is reachable.","No. Weak signal, Doze or Data Saver can hold messages back.","Nothing yet."],
+["Phone battery manager","Your phone decides whether the app may wake up to handle the message.","Not directly. This is where aggressive phones stop apps. NEXGUARD shows what Android reports about itself.","No event. Check your phone brand's guide first."],
+["The app posts a notification","The app runs and asks Android to show a notification.","Only once Android receives it.","If the app never posts, there is nothing to record."],
+["Android shows it","Android displays the notification and tells NEXGUARD.","Yes.","A recorded event with time, app and type."]
+]

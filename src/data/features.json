@@ -1,0 +1,102 @@
+[
+ {
+  "id": "notification-monitor",
+  "name": "Notification event monitor",
+  "cat": "Monitoring",
+  "status": "Available",
+  "summary": "Records when a notification is posted or removed for the apps you choose.",
+  "details": [
+   "Uses Android's notification-access permission and listener service.",
+   "Each event is saved on your phone with the app, the time and the event type.",
+   "After a quiet period you can see when each app last reached your phone."
+  ],
+  "limits": "NEXGUARD only sees notifications that Android delivers to it. A message that never reached your phone cannot be recovered."
+ },
+ {
+  "id": "per-app-control",
+  "name": "Per-app control",
+  "cat": "Monitoring",
+  "status": "Available",
+  "summary": "Choose which apps are monitored and review each one.",
+  "details": [
+   "Search and filter your installed apps (all, user, system).",
+   "Switch monitoring on or off for each app.",
+   "On a new install, system apps start switched off and user apps on. Existing choices are kept when you update."
+  ],
+  "limits": "Apps you switch off leave gaps in your history on purpose."
+ },
+ {
+  "id": "local-history",
+  "name": "Local history and privacy modes",
+  "cat": "Privacy",
+  "status": "Available",
+  "summary": "A history stored only on your device, with the privacy level and retention you choose.",
+  "details": [
+   "Metadata only is the recommended mode. Metadata plus titles is optional.",
+   "The full message text is not stored.",
+   "Choose how long history is kept and clear it with one tap."
+  ],
+  "limits": "Backup of this data is switched off, so history does not move to a new phone."
+ },
+ {
+  "id": "diagnostics",
+  "name": "Background diagnostics",
+  "cat": "Diagnostics",
+  "status": "Available",
+  "summary": "Checks notification access, monitoring state and battery policy.",
+  "details": [
+   "Shows plain statuses for what Android reports.",
+   "Run a full check on demand, and NEXGUARD also checks in the background."
+  ],
+  "limits": "Android does not let one app read another app's battery or autostart settings, so those stay for you to check."
+ },
+ {
+  "id": "phone-guides",
+  "name": "Phone-specific guidance",
+  "cat": "Guidance",
+  "status": "Available",
+  "summary": "Guidance for phone brands that restrict background apps.",
+  "details": [
+   "The app shows brand guidance, for example for OPPO and Realme ColorOS.",
+   "The website has a guide for each major brand."
+  ],
+  "limits": "Menu names change between models and software versions."
+ },
+ {
+  "id": "restart-recovery",
+  "name": "Checks after restart",
+  "cat": "Reliability",
+  "status": "Available",
+  "summary": "Background checks are scheduled again after your phone restarts.",
+  "details": [
+   "Built on Android WorkManager.",
+   "A boot receiver reschedules the work."
+  ],
+  "limits": "Android decides the exact time and may delay background work to save battery."
+ },
+ {
+  "id": "languages",
+  "name": "Interface languages",
+  "cat": "Interface",
+  "status": "Beta",
+  "summary": "25 language options, including right-to-left layouts. All app text is translated, but the translations are machine-generated and not yet reviewed by native speakers.",
+  "details": [
+   "Languages: English, Simplified and Traditional Chinese, Arabic, Urdu, Persian, Hindi, Bengali, Punjabi, Russian, Ukrainian, Polish, Spanish, Portuguese, French, German, Italian, Dutch, Turkish, Indonesian, Vietnamese, Thai, Japanese, Korean and Swahili.",
+   "Every one of the app's 115 text items has a translation in every language.",
+   "Choose a language on first launch and change it any time."
+  ],
+  "limits": "Machine translation can be wrong or awkward, and some Android setting names may differ from what your phone shows. Long text may not fit every button. Native-speaker review is still to do."
+ },
+ {
+  "id": "themes",
+  "name": "Themes and comfort settings",
+  "cat": "Interface",
+  "status": "Available",
+  "summary": "Four themes, reduced motion and haptic feedback.",
+  "details": [
+   "Themes: Black, White, Golden and Black, Golden and White.",
+   "Switch haptics and reduced motion on or off in Settings."
+  ],
+  "limits": "None known."
+ }
+]

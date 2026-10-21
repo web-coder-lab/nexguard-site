@@ -1,0 +1,34 @@
+[
+ [
+  "POST_NOTIFICATIONS",
+  "Shows the app's own diagnostic notices on Android 13 and later."
+ ],
+ [
+  "RECEIVE_BOOT_COMPLETED",
+  "Reschedules diagnostics after the phone restarts."
+ ],
+ [
+  "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+  "Opens the system screen where you can exempt NEXGUARD from battery limits."
+ ],
+ [
+  "ACCESS_NETWORK_STATE",
+  "Reads whether a network is available for the diagnostics screen. It is not used to upload data."
+ ],
+ [
+  "VIBRATE",
+  "Supports local alert feedback."
+ ],
+ [
+  "QUERY_ALL_PACKAGES",
+  "Lists installed apps so you can choose which ones to monitor. This is broad app visibility."
+ ],
+ [
+  "WAKE_LOCK",
+  "Used by the background-work library."
+ ],
+ [
+  "Notification access (system setting)",
+  "Required by Android so the app can observe posted and removed notifications."
+ ]
+]

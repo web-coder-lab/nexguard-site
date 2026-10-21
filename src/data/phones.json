@@ -1,0 +1,10 @@
+[
+{"id":"oppo","name":"OPPO and Realme","tested":true,"steps":["Open Settings, Battery, App Battery Management.","Find the app and enable Allow foreground activity.","Enable Allow background activity.","If your phone has Startup Manager or Auto-launch, allow it for the app."],"note":"This is the guidance NEXGUARD shows for ColorOS. The developer's own phone is an OPPO running ColorOS 5.2.1."},
+{"id":"samsung","name":"Samsung","tested":false,"steps":["Open Settings, Battery, Background usage limits.","Remove the app from Sleeping apps and Deep sleeping apps.","Add it to Never sleeping apps."],"note":""},
+{"id":"xiaomi","name":"Xiaomi, Redmi and POCO","tested":false,"steps":["Open Settings, Apps, Manage apps and choose the app.","Turn on Autostart.","Set Battery saver to No restrictions."],"note":""},
+{"id":"vivo","name":"Vivo","tested":false,"steps":["Open Settings, Battery, Background power consumption management.","Set the app to Allow high background power use.","Enable Autostart in iManager if you see it."],"note":""},
+{"id":"huawei","name":"Huawei and Honor","tested":false,"steps":["Open Settings, Battery, App launch.","Turn off Manage automatically for the app.","Enable Auto-launch, Secondary launch and Run in background."],"note":""},
+{"id":"oneplus","name":"OnePlus","tested":false,"steps":["Open Settings, Battery, Battery optimization.","Choose the app and select Don't optimize.","Allow Auto launch in App management if it is shown."],"note":""},
+{"id":"pixel","name":"Google Pixel","tested":false,"steps":["Open Settings, Apps and choose the app.","Open App battery usage.","Select Unrestricted."],"note":""},
+{"id":"other","name":"Other phones","tested":false,"steps":["Open Settings, Apps, choose the app, then Battery.","Pick the option that means unrestricted or no optimization.","Search Settings for autostart or background activity."],"note":""}
+]

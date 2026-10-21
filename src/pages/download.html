@@ -1,0 +1,17 @@
+title: Download NEXGUARD {{version}} for Android
+desc: Download NEXGUARD {{version}}, the APK checksum, the source code archives, and verify the signing certificate.
+path: /download/
+css: releases
+---
+<div class="w sec"><p class="crumb"><a href="/">Home</a> / Download</p><h1 style="font-size:clamp(2rem,5vw,3.4rem)">Download</h1><p class="lead">Every release is built by GitHub Actions and signed with the developer's key.</p>
+<div class="rel"><div class="rel-h"><span class="tagch">{{icon:tag}} {{tag}}</span><h2>NEXGUARD {{version}}</h2><span class="muted">{{icon:calendar}} 20 October 2026</span></div>
+<div class="rel-b"><h3>What's new</h3>{{whatsNew}}</div>
+<table class="assets"><tr><td><a href="{{apkUrl}}">{{icon:package}} {{apkName}}</a><code>SHA-256 {{apkSha}}</code></td><td class="sz">{{size}}</td></tr>
+<tr><td><a href="{{shaUrl}}">{{icon:file}} {{apkName}}.sha256</a></td><td class="sz">checksum file</td></tr>
+<tr><td><a href="{{zipUrl}}">{{icon:archive}} Source code (zip)</a></td><td class="sz">{{tag}}</td></tr>
+<tr><td><a href="{{tarUrl}}">{{icon:archive}} Source code (tar.gz)</a></td><td class="sz">{{tag}}</td></tr></table></div>
+<div class="row"><a class="btn" href="{{apkUrl}}">{{icon:download}} Download APK</a><a class="btn ghost" href="{{releaseUrl}}">{{icon:external}} Release on GitHub</a></div>
+<div class="split" style="margin-top:56px"><div><h2>Check the file</h2><p class="muted">Compare before you install.</p></div><div class="prose"><p>SHA-256 of the APK:</p><p><code>{{apkSha}}</code></p><button class="btn ghost sm" data-copy="{{apkSha}}">{{icon:copy}} Copy APK hash</button><p style="margin-top:18px">Signing certificate SHA-256:</p><p><code>{{fingerprint}}</code></p><button class="btn ghost sm" data-copy="{{fingerprint}}">{{icon:copy}} Copy fingerprint</button> <span class="note" id="copy-status" role="status"></span><p style="margin-top:18px">On a computer: <code>sha256sum {{apkName}}</code></p></div></div>
+<div class="split" style="margin-top:48px"><div><h2>Install</h2></div><div class="prose"><ol><li>Download the APK.</li><li>Open it. If Android asks, allow installs from your browser or file manager.</li><li>Open NEXGUARD, grant notification access and choose your apps.</li></ol><p>You can install it over 1.0.1 or 1.0.2, because they were signed with the same key. If Android reports a signature mismatch, uninstall the old copy first.</p><table class="info"><tr><th>Android</th><td>{{minAndroid}} or newer</td></tr><tr><th>Tested on</th><td>{{tested}}. Other phones are untested.</td></tr><tr><th>Internet</th><td>Not requested by the app</td></tr></table></div></div>
+<div class="split" style="margin-top:48px"><div><h2>Older versions</h2></div><ul class="vlist">{{olderReleases}}</ul></div></div>
+<div class="sticky-cta"><a class="btn" href="{{apkUrl}}">{{icon:download}} Download v{{version}}</a></div>
