@@ -9,10 +9,10 @@ css: source
 <div class="clone"><input id="cl" readonly value="git clone {{cloneUrl}}" aria-label="Clone command"><button class="btn sm" data-copy="git clone {{cloneUrl}}">{{icon:copy}} Copy</button></div><span class="note" id="copy-status" role="status"></span>
 <div class="dls"><a class="btn ghost" href="{{zipUrl}}">{{icon:archive}} Download zip</a><a class="btn ghost" href="{{tarUrl}}">{{icon:archive}} Download tar.gz</a><a class="btn ghost" href="{{repo}}">{{icon:external}} Open on GitHub</a><a class="btn ghost" href="{{repo}}/issues">{{icon:info}} Issues</a></div>
 <div class="tabs" role="tablist" aria-label="Repository"><button role="tab" aria-selected="true" data-tab="readme">README</button><button role="tab" aria-selected="false" data-tab="changelog">Changelog</button><button role="tab" aria-selected="false" data-tab="security">Security</button><button role="tab" aria-selected="false" data-tab="files">Files</button></div>
-<div class="tp md" id="readme" role="tabpanel">{{readmeHtml}}</div>
-<div class="tp md" id="changelog" role="tabpanel">{{changelogHtml}}</div>
-<div class="tp md" id="security" role="tabpanel">{{securityMd}}</div>
-<div class="tp" id="files" role="tabpanel"><p class="note">The tree is a snapshot of {{tag}}. Each file opens on GitHub.</p>{{fileTree}}</div>
+<div class="tp md" id="repo-readme" data-tab-panel="readme" role="tabpanel">{{readmeHtml}}</div>
+<div class="tp md" id="repo-changelog" data-tab-panel="changelog" role="tabpanel">{{changelogHtml}}</div>
+<div class="tp md" id="repo-security" data-tab-panel="security" role="tabpanel">{{securityMd}}</div>
+<div class="tp" id="repo-files" data-tab-panel="files" role="tabpanel"><p class="note">The tree is a snapshot of {{tag}}. Each file opens on GitHub.</p>{{fileTree}}</div>
 <div class="split" style="margin-top:40px"><div><h2>Build from source</h2></div><div class="prose"><p>You need JDK 17, the Android SDK (platform 36) and the Gradle wrapper that is already in the repository.</p><pre class="md"><code>git clone {{cloneUrl}}
 cd nexguard
 chmod +x ./gradlew

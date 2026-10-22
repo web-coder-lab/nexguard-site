@@ -1,5 +1,5 @@
 // Wires the demo player: scaling, controls, chapters, captions, autoplay when visible, and sound.
-import { sound } from './sound.js';
+import { sound } from '../sound.js';
 import { createApp } from './app.js';
 import { createTour } from './tour.js';
 
@@ -33,7 +33,8 @@ function init(host) {
   $('#replay').onclick = () => { sound.wake(); tour.replay(); };
   chap.forEach((b, i) => b.onclick = () => { sound.wake(); tour.goto(i); });
   function paintSound() { const on = sound.enabled; snd.setAttribute('aria-pressed', on); snd.setAttribute('aria-label', on ? 'Sound effects on' : 'Sound effects off'); snd.innerHTML = on ? ICON.on : ICON.speakerOff; }
-  snd.onclick = () => { sound.enable(!sound.enabled); paintSound(); if (sound.enabled) sound.play('success'); };
+  snd.onclick = () => { sound.wake(); sound.enable(!sound.enabled); if (sound.enabled) { sound.wake(); sound.play('success'); } };
+  addEventListener('ng-sound', paintSound);
   if (sound.remembered()) { sound.enable(true); } paintSound();
   tour.chapters && (cap.innerHTML = `<b>${tour.chapters[0].t}</b>${tour.chapters[0].d}`);
   tour.pause(); chap[0].setAttribute('aria-current', 'true');
