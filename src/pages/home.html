@@ -1,7 +1,8 @@
 title: NEXGUARD: find out why your notifications go quiet
 desc: NEXGUARD is a free, open-source Android app that records notification events, checks background settings and guides you to the fix.
 path: /
-css: home store
+css: home store demo-frame demo-app
+js: demo/main
 ---
 <section class="hero"><div><h1 data-kinetic>Find out why your notifications go quiet.</h1>
 <p class="lead">NEXGUARD records when notifications reach your Android phone, checks the settings that block background apps, and shows you the fix for your phone brand. Everything stays on your device.</p>
@@ -9,6 +10,7 @@ css: home store
 <a class="appcard" href="/app/"><img src="/assets/img/icon-192.png" alt="" width="64" height="64"><span><b>NEXGUARD</b><small>{{author}}</small><small>Version {{version}}, free, open source</small></span></a></div>
 <div class="phones tilt"><div class="frame ph2"><img src="/assets/img/screens/02-diagnostics-sm.jpg" alt="NEXGUARD diagnostics screen" width="360" height="760"></div><div class="frame ph1"><img src="/assets/img/screens/01-home-sm.jpg" alt="NEXGUARD home screen showing Monitoring Active" width="360" height="760" fetchpriority="high"></div></div></section>
 <div class="mq" aria-label="Phone brand guides"><div>{{marquee}}</div></div>
+<section class="w sec" id="demo">{{inc:demo-player}}</section>
 <section class="w sec"><div class="sh"><h2>The app, on a real phone</h2><span><button class="ib" data-scroll="-1" data-target="#c1" aria-label="Previous">{{icon:chevron-left}}</button> <button class="ib" data-scroll="1" data-target="#c1" aria-label="Next">{{icon:chevron-right}}</button></span></div>
 <p class="muted">Screenshots of version {{version}}, taken on an OPPO CPH1909. <a href="/screenshots/">All screenshots</a></p><div class="shots" id="c1" tabindex="0" role="region" aria-label="Screenshots">{{shotsCarousel}}</div></section>
 <section class="w sec"><div class="bento">

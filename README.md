@@ -13,6 +13,7 @@ Build: `node build.mjs` (output in `dist/`). Deploy on Render as a Static Site: 
 - `src/assets/js/`: one file per behaviour (kinetic, tilt, spotlight, magnetic, progress, journey, carousel, tabs, lightbox, theme, menu, copy).
 - `src/assets/img/`: app icon, WeChat QR, `screens/` (small and large version of each screenshot).
 - `src/icons/`: one SVG file per icon, inlined with `{{icon:name}}`.
+- Live demo (`/demo/` and the home page): `src/partials/demo-*.html` (one file per app screen), `src/assets/css/demo-frame.css` and `demo-app.css`, and `src/assets/js/demo/` (`app.js` state and interactions, `tour.js` scripted tour, `sound.js` Web Audio effects, `main.js` player). Colors, sizes, shield shape and text come from the app's source code (Color.kt, GuardianShield.kt, AppStrings.kt).
 
 ## New release checklist
 1. Update `src/data/site.json` (version, tag, apkUrl, shaUrl, zipUrl, tarUrl, apkSha, size) and `src/data/releases.json`.

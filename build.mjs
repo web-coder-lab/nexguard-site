@@ -45,7 +45,8 @@ function out(file, m, body) {
   let head = inc(R(`${S}/partials/header.html`, 'utf8'));
   if (path !== '/') head = head.replace(`href="${path}"`, `href="${path}" aria-current="page"`);
   const css = (m.css ? m.css.split(' ') : []).map(c => `<link rel="stylesheet" href="/assets/css/${c}.css">`).join('');
-  const html = inc(R(`${S}/layouts/base.html`, 'utf8'), { title: m.title, desc: m.desc, canon, pagecss: css, content: body, header: head });
+  const pagejs = (m.js ? m.js.split(' ') : []).map(j => `<script type="module" src="/assets/js/${j}.js"></script>`).join('');
+  const html = inc(R(`${S}/layouts/base.html`, 'utf8'), { title: m.title, desc: m.desc, canon, pagecss: css, pagejs, content: body, header: head });
   const f = file || `${D}${path}index.html`; mkdirSync(f.replace(/\/[^/]*$/, ''), { recursive: true }); writeFileSync(f, html);
   if (!file) urls.push(path);
 }
