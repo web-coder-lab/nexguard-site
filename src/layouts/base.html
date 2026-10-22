@@ -1,17 +1,16 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>{{title}}</title><meta name="description" content="{{desc}}">
-<meta property="og:title" content="{{title}}"><meta property="og:description" content="{{desc}}"><meta property="og:type" content="website"><meta property="og:image" content="{{ogimg}}"><meta name="twitter:card" content="summary_large_image">
-{{canon}}<meta name="theme-color" content="#070a0e"><meta name="color-scheme" content="dark light"><link rel="icon" href="/assets/img/icon-192.png"><link rel="apple-touch-icon" href="/assets/img/icon-192.png">
-<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('ng-theme')||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='dark'}</script>
-<link rel="stylesheet" href="/assets/css/tokens.css"><link rel="stylesheet" href="/assets/css/base.css"><link rel="stylesheet" href="/assets/css/layout.css"><link rel="stylesheet" href="/assets/css/components.css"><link rel="stylesheet" href="/assets/css/transitions.css"><link rel="stylesheet" href="/assets/css/gallery.css"><link rel="stylesheet" href="/assets/css/aurora.css">{{pagecss}}
+<meta property="og:title" content="{{title}}"><meta property="og:description" content="{{desc}}"><meta property="og:type" content="website"><meta property="og:image" content="{{ogimg}}"><meta name="twitter:card" content="summary">
+{{canon}}<meta name="theme-color" content="#0b1512"><link rel="icon" href="/assets/img/icon-192.png">
+<script>document.documentElement.classList.add("js");try{var t=localStorage.getItem("ng-theme")||(matchMedia("(prefers-color-scheme:light)").matches?"light":"dark");document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="dark"}</script>
+<link rel="stylesheet" href="/assets/css/tokens.css"><link rel="stylesheet" href="/assets/css/base.css"><link rel="stylesheet" href="/assets/css/layout.css"><link rel="stylesheet" href="/assets/css/components.css"><link rel="stylesheet" href="/assets/css/transitions.css"><link rel="stylesheet" href="/assets/css/gallery.css">{{pagecss}}
 </head><body>
-<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
-<a class="skip" href="#main">Skip to content</a><div id="pg" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a><div id="pg"></div>
 {{header}}
 <main id="main" tabindex="-1">{{content}}</main>
 {{inc:footer}}
 <dialog id="lb" aria-label="Screenshot"><button class="ib" aria-label="Close">{{icon:x}}</button><img alt=""></dialog>
-<script src="/assets/js/theme.js" defer></script><script src="/assets/js/menu.js" defer></script><script src="/assets/js/progress.js" defer></script><script src="/assets/js/kinetic.js" defer></script><script src="/assets/js/reveal.js" defer></script><script src="/assets/js/tilt.js" defer></script><script src="/assets/js/spotlight.js" defer></script><script src="/assets/js/magnetic.js" defer></script><script src="/assets/js/copy.js" defer></script><script src="/assets/js/journey.js" defer></script><script src="/assets/js/carousel.js" defer></script><script src="/assets/js/tabs.js" defer></script><script src="/assets/js/lightbox.js" defer></script>
-<script type="module" src="/assets/js/ui-sound.js"></script>{{pagejs}}
+<script src="/assets/js/theme.js" defer></script><script src="/assets/js/menu.js" defer></script><script src="/assets/js/progress.js" defer></script><script src="/assets/js/kinetic.js" defer></script><script src="/assets/js/tilt.js" defer></script><script src="/assets/js/spotlight.js" defer></script><script src="/assets/js/magnetic.js" defer></script><script src="/assets/js/copy.js" defer></script><script src="/assets/js/journey.js" defer></script><script src="/assets/js/carousel.js" defer></script><script src="/assets/js/tabs.js" defer></script><script src="/assets/js/lightbox.js" defer></script>
+{{pagejs}}
 </body></html>

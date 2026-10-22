@@ -1,109 +1,26 @@
-title: NEXGUARD — understand the silence behind missing notifications
-desc: NEXGUARD is a free, open-source Android notification health monitor. See delivery events, inspect background settings and find device-specific guidance.
+title: NEXGUARD: find out why your notifications go quiet
+desc: NEXGUARD is a free, open-source Android app that records notification events, checks background settings and guides you to the fix.
 path: /
-css: home store demo-frame demo-app stage
-js: stage
+css: home store demo-frame demo-app
+js: demo/main
 ---
-<section class="story" data-stage aria-label="Explore NEXGUARD">
-  <div class="stage" data-ch="0">
-    <div class="phone3d"><div class="phone-rot">{{inc:demo-phone}}</div></div>
-    <div class="chips" aria-hidden="true">
-      <div class="chip c1"><i>01</i><span><b>Event recorded <em>● local</em></b><small>Delivered · 10:42:18</small></span></div>
-      <div class="chip c2"><i>✓</i><span><b>Device status</b><small>Read from Android settings</small></span></div>
-      <div class="chip c3"><i>↗</i><span><b>Guidance, not guesses</b><small>Brand-specific settings steps</small></span></div>
-      <div class="chip c4"><i>⌁</i><span><b>On-device history</b><small>No account · no ad tracking</small></span></div>
-    </div>
-    <div class="hint" aria-hidden="true"><i></i><span>SCROLL TO EXPLORE</span></div>
-  </div>
-  <div class="chs">
-    <article class="ch on" data-step="0"><div class="in-c">
-      <p class="eyebrow">ANDROID / NOTIFICATION HEALTH</p>
-      <h1 data-kinetic>When notifications go quiet, find out why.</h1>
-      <p>NEXGUARD records the notification events Android delivers, checks background settings and helps you find the next useful step — without pretending it can control the whole phone.</p>
-      <div class="row"><a class="btn" href="/download/">{{icon:download}} Get NEXGUARD <span aria-hidden="true">↗</span></a><a class="btn ghost" href="/demo/">Try the live demo</a></div>
-      <p class="stage-foot">FREE · OPEN SOURCE · GPL-3.0-ONLY</p>
-    </div></article>
-    <article class="ch" data-step="1"><div class="in-c">
-      <p class="eyebrow">01 / DELIVERY HISTORY</p><h2>Make the invisible visible.</h2>
-      <p>See which notification events the system delivered to NEXGUARD and when. A small, local timeline helps separate “nothing arrived” from “something changed.”</p>
-      <p class="stage-foot">EVENT METADATA · STORED ON YOUR PHONE</p>
-    </div></article>
-    <article class="ch" data-step="2"><div class="in-c">
-      <p class="eyebrow">02 / DIAGNOSTICS</p><h2>Check what Android can actually tell you.</h2>
-      <p>Review notification access, monitoring state and battery policy as the operating system reports them. Where Android cannot provide an answer, NEXGUARD should not invent one.</p>
-      <p class="stage-foot">CLEAR STATUS · NO FALSE CERTAINTY</p>
-    </div></article>
-    <article class="ch" data-step="3"><div class="in-c">
-      <p class="eyebrow">03 / PHONE GUIDES</p><h2>Get to the setting that matters.</h2>
-      <p>Follow practical guidance for manufacturer-specific background restrictions, including OPPO, Samsung, Xiaomi, Vivo, Huawei, OnePlus and Pixel. Not every menu name is identical across versions.</p>
-      <p class="stage-foot">DEVICE-SPECIFIC STEPS · TEST STATUS SHOWN HONESTLY</p>
-    </div></article>
-    <article class="ch" data-step="4"><div class="in-c">
-      <p class="eyebrow">04 / MONITORING</p><h2>Your controls stay understandable.</h2>
-      <p>Review monitoring state and the permissions it depends on. NEXGUARD checks and explains; Android still decides how apps behave in the background.</p>
-      <p class="stage-foot">NO ROOT · NO DEVICE MODIFICATION</p>
-    </div></article>
-    <article class="ch" data-step="5"><div class="in-c">
-      <p class="eyebrow">05 / YOUR INTERFACE</p><h2>Calm, personal, and accessible.</h2>
-      <p>Choose among four themes, adjust motion and use haptic feedback controls. The website also supports dark and light modes, keyboard navigation and reduced-motion preferences.</p>
-      <p class="stage-foot">FOUR APP THEMES · REDUCED-MOTION SUPPORT</p>
-    </div></article>
-    <article class="ch" data-step="6"><div class="in-c">
-      <p class="eyebrow">06 / APP SELECTION</p><h2>Choose which apps to watch.</h2>
-      <p>Set monitoring per app instead of treating every package the same. New installs start with user apps enabled and system apps excluded; existing choices are not overwritten.</p>
-      <p class="stage-foot">PER-APP CONTROLS · LOCAL PREFERENCES</p>
-    </div></article>
-    <article class="ch" data-step="7"><div class="in-c">
-      <p class="eyebrow">07 / PRIVACY &amp; LIMITS</p><h2>Private by design. Honest about the limits.</h2>
-      <p>NEXGUARD does not request the internet permission. It cannot stop Android from closing apps, restart an app that was force-stopped, or recover a notification that never arrived.</p>
-      <div class="row"><a class="btn" href="/download/">Install version {{version}}</a><a class="btn ghost" href="/privacy/">Read privacy details</a></div>
-      <p class="stage-foot">NO ACCOUNT · NO ADS · NO ANALYTICS IN THE APP</p>
-    </div></article>
-  </div>
-</section>
-
-<div class="mq" aria-label="Supported phone-brand guidance"><div>{{marquee}}</div></div>
-
-<section class="w sec" id="download">
-  <div class="home-intro"><div><p class="eyebrow">GET THE APP</p><h2>Choose your way in.</h2><p>Direct Android install, release assets and source code — grouped clearly, with no fake store buttons or unverified listings.</p></div><a class="btn ghost" href="/download/">All download details ↗</a></div>
-  <div class="distribution-grid">
-    <a class="platform-card primary" href="{{apkUrl}}"><span class="platform-top">↓</span><span><b>Direct APK</b><small>Version {{version}} · {{size}} · Android {{minAndroid}}+</small></span><span class="platform-arrow" aria-hidden="true">↗</span></a>
-    <a class="platform-card" href="{{releaseUrl}}"><span class="platform-top">GH</span><span><b>GitHub release</b><small>Open the tagged release, release notes, APK asset and signing details.</small></span><span class="platform-arrow" aria-hidden="true">↗</span></a>
-    <a class="platform-card" href="/source/"><span class="platform-top">{ }</span><span><b>Source code</b><small>Browse the project, read the license and download source archives.</small></span><span class="platform-arrow" aria-hidden="true">↗</span></a>
-  </div>
-  <div class="platform-status">
-    <div class="status-card"><span class="status-mark">GP</span><div><b>Google Play style, without a fake listing</b><p>This website does not claim a Play Store listing. Use the direct APK link above until an official store URL is published here.</p></div></div>
-    <div class="status-card"><span class="status-mark">FD</span><div><b>F-Droid distribution</b><p>No F-Droid listing is linked from this site at present. The source and signed GitHub release remain available above.</p></div></div>
-  </div>
-  <div class="store-summary"><img class="app-icon" src="/assets/img/icon-512.png" alt="NEXGUARD app icon" width="92" height="92"><div><h3>NEXGUARD {{version}}</h3><p>On-device notification health monitor · {{author}}</p><div class="store-meta"><span>{{size}}</span><span>Android {{minAndroid}}+</span><span>{{languages}} languages</span><span>GPL-3.0-only</span></div></div><div class="store-action"><a class="btn" href="/download/">View release details ↗</a></div></div>
-</section>
-
-<section class="w sec home-gallery">
-  <div class="sh"><h2>The app, not a mock marketing render.</h2><span><button class="ib" data-scroll="-1" data-target="#c1" aria-label="Previous screenshot">{{icon:chevron-left}}</button> <button class="ib" data-scroll="1" data-target="#c1" aria-label="Next screenshot">{{icon:chevron-right}}</button></span></div>
-  <p class="muted">Screenshots from version {{version}}, taken on an OPPO CPH1909 running Android 8.1.0. <a href="/screenshots/">Explore all screenshots ↗</a></p>
-  <div class="shots" id="c1" tabindex="0" role="region" aria-label="NEXGUARD screenshots">{{shotsCarousel}}</div>
-</section>
-
-<section class="w sec">
-  <div class="home-intro"><div><p class="eyebrow">CORE FEATURES</p><h2>Useful signals. Less noise.</h2><p>Tools for understanding delivery and background policy, not promises to control Android.</p></div><a class="btn ghost" href="/features/">Explore all features ↗</a></div>
-  <div class="home-tiles">
-    <article class="home-tile"><span class="tile-icon">{{icon:bell}}</span><div><h3>Event history</h3><p>Review notification post and removal events for the apps you select, with timestamps and event metadata.</p></div><a href="/how-it-works/">How it works <span aria-hidden="true">↗</span></a></article>
-    <article class="home-tile"><span class="tile-icon">{{icon:battery}}</span><div><h3>Readable diagnostics</h3><p>Inspect permission and battery-policy states using information Android exposes to the app.</p></div><a href="/features/diagnostics/">Diagnostics details <span aria-hidden="true">↗</span></a></article>
-    <article class="home-tile"><span class="tile-icon">{{icon:phone}}</span><div><h3>Brand-specific guides</h3><p>Find practical steps for common phone manufacturers, with tested status clearly identified.</p></div><a href="/phones/">Browse phone guides <span aria-hidden="true">↗</span></a></article>
-    <article class="home-tile"><span class="tile-icon">{{icon:lock}}</span><div><h3>On-device by default</h3><p>The app requests no internet permission and includes no account system, ads or analytics.</p></div><a href="/privacy/">Privacy details <span aria-hidden="true">↗</span></a></article>
-    <article class="home-tile"><span class="tile-icon">{{icon:palette}}</span><div><h3>Theme and motion controls</h3><p>Use four app themes, reduced motion and haptic-feedback settings for a calmer interface.</p></div><a href="/app/">App overview <span aria-hidden="true">↗</span></a></article>
-    <article class="home-tile"><span class="tile-icon">{{icon:code}}</span><div><h3>Open source</h3><p>Read the source, release notes, security policy and GPL-3.0-only license before installing.</p></div><a href="/source/">Browse repository <span aria-hidden="true">↗</span></a></article>
-  </div>
-</section>
-
-<section class="w sec">
-  <div class="home-intro"><div><p class="eyebrow">A CLEAR BOUNDARY</p><h2>Know what it can — and cannot — do.</h2><p>Good troubleshooting starts with clear limits.</p></div></div>
-  <div class="boundary-grid">
-    <div class="bx yes"><h3>{{icon:check}} What NEXGUARD can do</h3><ul><li>Record notification events Android delivers to it.</li><li>Show monitoring and permission states it can read.</li><li>Explain relevant background and battery settings.</li><li>Keep its app history on your device.</li></ul></div>
-    <div class="bx no"><h3>{{icon:x}} What NEXGUARD cannot do</h3><ul><li>Stop Android or a manufacturer from closing another app.</li><li>Restart an app that was force-stopped by the user or system.</li><li>Recover notifications that never reached the phone.</li><li>Guarantee that a specific setting will fix every device.</li></ul></div>
-  </div>
-</section>
-
-<section class="w sec"><div class="repo-panel"><div><p class="eyebrow">OPEN DEVELOPMENT</p><h2>Read the code. Verify the release.</h2><p>See the source tree, checksums, signing certificate fingerprint, changelog and security policy in one place.</p></div><div class="row"><a class="btn" href="/source/">Explore source code</a><a class="btn ghost" href="{{releaseUrl}}">Open GitHub release ↗</a></div></div></section>
-
-<section class="w sec"><div class="final-cta"><p class="eyebrow" style="justify-content:center">START WITH ONE QUIET APP</p><h2>Understand the signal before you change the settings.</h2><p>Install NEXGUARD, grant the access it needs and check what Android reports. No account or subscription required.</p><div class="row"><a class="btn" href="/download/">{{icon:download}} Download version {{version}}</a><a class="btn ghost" href="/demo/">Try the interactive demo</a></div><p class="note" style="margin-top:18px">Built by {{author}} in {{country}} · Tested on {{tested}}</p></div></section>
+<section class="hero"><div><h1 data-kinetic>Find out why your notifications go quiet.</h1>
+<p class="lead">NEXGUARD records when notifications reach your Android phone, checks the settings that block background apps, and shows you the fix for your phone brand. Everything stays on your device.</p>
+<div class="row"><a class="btn" href="/download/">{{icon:download}} Download for Android</a><a class="btn ghost" href="/app/">See the app</a></div>
+<a class="appcard" href="/app/"><img src="/assets/img/icon-192.png" alt="" width="64" height="64"><span><b>NEXGUARD</b><small>{{author}}</small><small>Version {{version}}, free, open source</small></span></a></div>
+<div class="phones tilt"><div class="frame ph2"><img src="/assets/img/screens/02-diagnostics-sm.jpg" alt="NEXGUARD diagnostics screen" width="360" height="760"></div><div class="frame ph1"><img src="/assets/img/screens/01-home-sm.jpg" alt="NEXGUARD home screen showing Monitoring Active" width="360" height="760" fetchpriority="high"></div></div></section>
+<div class="mq" aria-label="Phone brand guides"><div>{{marquee}}</div></div>
+<section class="w sec" id="demo">{{inc:demo-player}}</section>
+<section class="w sec"><div class="sh"><h2>The app, on a real phone</h2><span><button class="ib" data-scroll="-1" data-target="#c1" aria-label="Previous">{{icon:chevron-left}}</button> <button class="ib" data-scroll="1" data-target="#c1" aria-label="Next">{{icon:chevron-right}}</button></span></div>
+<p class="muted">Screenshots of version {{version}}, taken on an OPPO CPH1909. <a href="/screenshots/">All screenshots</a></p><div class="shots" id="c1" tabindex="0" role="region" aria-label="Screenshots">{{shotsCarousel}}</div></section>
+<section class="w sec"><div class="bento">
+<div class="bx big">{{icon:bell}}<h2>Record what Android actually delivered.</h2><p>Every post and removal for the apps you choose, kept on your phone. No more guessing whether a notification ever arrived.</p></div>
+<div class="bx sm">{{icon:battery}}<h3>Diagnose</h3><p>Notification access, monitoring state and battery policy, as Android reports them.</p></div>
+<div class="bx sm">{{icon:phone}}<h3>Guide</h3><p>Steps for OPPO, Samsung, Xiaomi, Vivo, Huawei, OnePlus and Pixel.</p></div>
+<div class="bx mid">{{icon:lock}}<h3>Private by default</h3><p>Metadata only unless you opt in to titles. No message text. The app does not ask for the internet permission.</p></div>
+<div class="bx mid">{{icon:restart}}<h3>Back after a restart</h3><p>Background checks are scheduled again when your phone boots. Android sets the exact timing.</p></div></div></section>
+<section class="w sec"><h2>What NEXGUARD can and cannot do</h2><div class="cols">
+<div class="bx yes"><h3>{{icon:check}} It can</h3><ul><li>Record notification events Android delivers to it</li><li>Show what changed in your settings</li><li>Point you to the right settings screen</li></ul></div>
+<div class="bx no"><h3>{{icon:x}} It cannot</h3><ul><li>Stop your phone from closing other apps</li><li>Restart an app that was force-stopped</li><li>Recover a notification that never reached your phone</li></ul></div></div></section>
+<section class="w sec split"><div><h2>What works today</h2><p class="muted">Only what is in version {{version}}.</p><a class="btn ghost" href="/features/">All features</a></div><ul class="rows">{{featureRows}}</ul></section>
+<section class="w sec"><div class="bx" style="text-align:center;padding:clamp(32px,6vw,64px)"><h2>Install it, then check one quiet app.</h2><p style="margin:0 auto 20px">Built by {{author}} in {{country}} after his own phone kept closing apps on every restart. Tested on {{tested}}.</p><div class="row" style="justify-content:center"><a class="btn" href="/download/">{{icon:download}} Download version {{version}}</a><a class="btn ghost" href="/source/">{{icon:code}} Source code</a></div></div></section>

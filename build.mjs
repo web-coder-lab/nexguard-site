@@ -43,9 +43,7 @@ const urls = [];
 function out(file, m, body) {
   const path = m.path, canon = URL ? `<link rel="canonical" href="${URL}${path}">` : '';
   let head = inc(R(`${S}/partials/header.html`, 'utf8'));
-  const activePath = path === '/' ? '/' : path.startsWith('/features/') ? '/features/' : path.startsWith('/phones/') ? '/phones/' : path;
-  if (activePath === '/') head = head.replace('<a href="/">Overview</a>', '<a href="/" aria-current="page">Overview</a>');
-  else head = head.replace(`href="${activePath}"`, `href="${activePath}" aria-current="page"`);
+  if (path !== '/') head = head.replace(`href="${path}"`, `href="${path}" aria-current="page"`);
   const css = (m.css ? m.css.split(' ') : []).map(c => `<link rel="stylesheet" href="/assets/css/${c}.css">`).join('');
   const pagejs = (m.js ? m.js.split(' ') : []).map(j => `<script type="module" src="/assets/js/${j}.js"></script>`).join('');
   const html = inc(R(`${S}/layouts/base.html`, 'utf8'), { title: m.title, desc: m.desc, canon, pagecss: css, pagejs, content: body, header: head });
