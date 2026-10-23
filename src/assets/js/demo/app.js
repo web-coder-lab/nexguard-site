@@ -1,5 +1,5 @@
 // The NEXGUARD app replica: screens, state and interactions. One code path for real taps and the scripted tour.
-import { sound } from './sound.js';
+import { sound } from '../sound.js';
 const THEMES = [['black', 'Black'], ['white', 'White'], ['goldblack', 'Golden & Black'], ['goldwhite', 'Golden & White']];
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 

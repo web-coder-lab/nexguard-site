@@ -1,6 +1,6 @@
-.btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;background:var(--a);color:var(--a-ink);font:600 1rem var(--body);border:0;border-radius:14px;padding:14px 24px;text-decoration:none;cursor:pointer;transition:transform .15s}
-.btn.sm{padding:9px 16px;border-radius:11px}.btn.ghost{background:transparent;color:var(--t);border:1.5px solid var(--line)}
-.ib{display:inline-grid;place-items:center;width:42px;height:42px;background:var(--s2);color:var(--t);border:1px solid var(--line);border-radius:12px;cursor:pointer}
+.btn{display:inline-flex;gap:8px;align-items:center;justify-content:center;background:var(--a);color:var(--a-ink);font:600 1rem var(--body);border:0;border-radius:999px;padding:15px 28px;text-decoration:none;cursor:pointer;transition:transform .15s,box-shadow .25s;box-shadow:0 10px 30px -12px color-mix(in srgb,var(--a) 70%,transparent)}
+.btn.sm{padding:9px 18px;border-radius:999px;font-size:.92rem}.btn.ghost{background:transparent;color:var(--t);border:1.5px solid var(--line);box-shadow:none}
+.ib{display:inline-grid;place-items:center;width:40px;height:40px;background:color-mix(in srgb,var(--s2) 85%,transparent);color:var(--t);border:1px solid var(--line);border-radius:50%;cursor:pointer;transition:background .2s}.ib:hover{background:var(--s2)}.ib[aria-pressed=true]{background:var(--a);color:var(--a-ink);border-color:var(--a)}
 .row{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0}
 .pill{display:inline-block;font-size:.78rem;font-weight:600;padding:2px 10px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
 .st-Available{color:var(--a)}.st-Beta{color:var(--warn)}.st-Soon{color:var(--m)}

@@ -23,3 +23,4 @@
 @media(max-width:900px){.demo{grid-template-columns:1fr}.demo-stage{order:-1}.chap{grid-auto-flow:column;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none;padding-bottom:6px}.chap button{padding:10px 14px}.cap{min-height:6.5em}}
 .demo>*,.demo-info,.demo-stage{min-width:0}
 @media(max-width:900px){.demo{grid-template-columns:minmax(0,1fr)}.demo-stage{width:100%}.chap{max-width:100%}}
+.phone-dev::after{content:"";position:absolute;inset:0;border-radius:46px;background:linear-gradient(118deg,rgba(255,255,255,.11),transparent 34%,transparent 68%,rgba(255,255,255,.05));pointer-events:none;z-index:7}

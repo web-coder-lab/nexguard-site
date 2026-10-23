@@ -1,34 +1,10 @@
-// Scripted tour: a visible finger taps the real buttons of the replica. Cancel-safe via a token.
-const CANCEL = Symbol('cancel');
+// Scripted tour for the /demo/ page: seven chapters played by the pilot.
+import { createPilot } from './pilot.js';
 const ALL = { grant: true };
 
 export function createTour(app, root, ui) {
-  const finger = root.querySelector('#finger'), q = s => root.querySelector(s);
-  let tok = 0, playing = false, idx = 0, fx = 180, fy = 720;
-  const scaleOf = () => root.getBoundingClientRect().width / 360;
-
-  function helpers(my) {
-    const alive = () => { if (my !== tok) throw CANCEL; };
-    const wait = ms => new Promise(r => setTimeout(r, ms)).then(alive);
-    async function scrollTo(scrollSel, targetSel) {
-      const sc = q(scrollSel), el = q(targetSel); if (!sc || !el) return;
-      const top = el.getBoundingClientRect().top - sc.getBoundingClientRect().top + sc.scrollTop - 150;
-      sc.scrollTo({ top: Math.max(0, top), behavior: app.motion ? 'smooth' : 'auto' }); await wait(app.motion ? 900 : 100);
-    }
-    async function tap(sel) {
-      const el = q(sel); if (!el) return; alive();
-      const sc = el.closest('.a-scroll');
-      if (sc) { const r = el.getBoundingClientRect(), s = sc.getBoundingClientRect(); if (r.bottom > s.bottom - 10 || r.top < s.top + 10) await scrollTo('#' + sc.id, sel); }
-      const a = root.getBoundingClientRect(), r = el.getBoundingClientRect(), k = scaleOf();
-      const x = (r.left - a.left + r.width / 2) / k, y = (r.top - a.top + r.height / 2) / k;
-      finger.classList.add('show');
-      const anim = finger.animate([{ transform: `translate(${fx}px,${fy}px)` }, { transform: `translate(${x}px,${y}px)` }], { duration: app.motion ? 560 : 1, easing: 'cubic-bezier(.2,0,0,1)', fill: 'forwards' });
-      await anim.finished.catch(() => {}); alive(); fx = x; fy = y;
-      finger.classList.add('down'); await wait(110); el.click(); await wait(130); finger.classList.remove('down');
-    }
-    return { wait, tap, scrollTo, alive };
-  }
-
+  const pilot = createPilot(app, root);
+  let playing = false, idx = 0;
   const chapters = [
     { t: 'Choose your language', d: 'On first launch you pick a language. You can change it later in Settings.', start: { stack: ['language'] },
       run: async h => { await h.wait(900); await h.tap('#s-language li:nth-child(2)'); await h.wait(450); await h.tap('#s-language li:nth-child(1)'); await h.wait(450); await h.tap('[data-act=lang-next]'); } },
@@ -48,21 +24,20 @@ export function createTour(app, root, ui) {
   ];
 
   async function runFrom(i, jump) {
-    const my = ++tok; playing = true; ui.state(true);
-    const h = helpers(my);
-    try {
+    playing = true; ui.state(true);
+    await pilot.run(async h => {
       for (let k = i, first = true; ; k = (k + 1) % chapters.length, first = false) {
         idx = k; ui.chapter(k, chapters[k]);
-        if ((first && jump) || k === 0) { app.setup(chapters[k].start); fx = 180; fy = 720; await h.wait(350); }
+        if ((first && jump) || k === 0) { app.setup(chapters[k].start); pilot.resetFinger(); await h.wait(350); }
         await chapters[k].run(h); await h.wait(700);
         if (k === chapters.length - 1) await h.wait(1600);
       }
-    } catch (e) { if (e !== CANCEL) throw e; }
+    });
   }
-  function pause() { tok++; playing = false; finger.classList.remove('show', 'down'); ui.state(false); }
+  function pause() { pilot.cancel(); playing = false; ui.state(false); }
   return {
     chapters, get playing() { return playing; },
-    goto(i) { pause(); finger.getAnimations().forEach(a => a.cancel()); runFrom(i, true); },
+    goto(i) { pause(); runFrom(i, true); },
     pause, replay() { this.goto(0); },
   };
 }

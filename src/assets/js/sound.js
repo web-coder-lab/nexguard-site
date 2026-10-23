@@ -26,7 +26,7 @@ const FX = {
 };
 export const sound = {
   get enabled() { return enabled; },
-  enable(v) { enabled = !!v; if (enabled) ensure(); try { localStorage.setItem('ng-sound', enabled ? '1' : '0'); } catch (e) {} },
+  enable(v) { enabled = !!v; if (enabled) ensure(); try { localStorage.setItem('ng-sound', enabled ? '1' : '0'); } catch (e) {} dispatchEvent(new Event('ng-sound')); },
   wake() { if (enabled) ensure(); },
   play(name) { if (enabled && ctx && FX[name]) FX[name](); },
   remembered() { try { return localStorage.getItem('ng-sound') === '1'; } catch (e) { return false; } },
