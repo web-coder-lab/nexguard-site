@@ -29,3 +29,4 @@ details{border-top:1px solid var(--line);padding:16px 0}summary{cursor:pointer;f
 .dlbar{display:none}
 @media(max-width:860px){.bento{grid-template-columns:1fr}.bx.big,.bx.sm,.bx.mid{grid-column:auto}.cols,.dl{grid-template-columns:1fr}.dl aside{position:static}.jn{grid-template-columns:1fr}
 .dlbar{display:block;position:sticky;bottom:0;padding:12px 22px calc(12px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--line);z-index:40}.dlbar .btn{width:100%}}
+.rows li{transition:background .25s,padding .25s}.rows li:hover{background:color-mix(in srgb,var(--s1) 70%,transparent)}

@@ -2,7 +2,7 @@ title: Security and data practices | NEXGUARD
 desc: What permissions NEXGUARD requests, how it is signed, and what has not been audited.
 path: /security/
 ---
-<div class="w sec narrow"><p class="crumb"><a href="/">Home</a> / Security</p><h1>Security and data practices</h1>
+<div class="w sec narrow"><header class="phero"><p class="crumb"><a href="/">Home</a> / Security</p><h1>Security and data <span class="grad">practices</span></h1></header>
 <p class="notice">NEXGUARD has not had an independent security audit and holds no certifications. This page describes the permissions of a released APK, read from the manifest of the released APK, version 1.0.3, and checked again for every release.</p>
 <div class="prose"><h2>Permissions</h2><table class="info">{{permRows}}</table>
 <h2>Network</h2><p>The app does not request the internet permission.</p><h2>Backup</h2><p>Android backup is switched off. The notification database and preferences are also excluded from cloud backup and device transfer.</p><h2>Foreground service</h2><p>The app does not start a foreground service. The unused permission was removed in 1.0.3.</p><h2>Signing</h2><p>Releases are built by GitHub Actions and signed with one key. Certificate SHA-256:</p><p><code>{{fingerprint}}</code></p>

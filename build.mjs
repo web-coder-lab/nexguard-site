@@ -13,6 +13,7 @@ const icon = n => R(`${S}/icons/${n}.svg`).trim();
 const rawBlob = `${site.repo}/blob/${site.tag}/`;
 const rd = f => R(`${S}/content/${f}`, 'utf8');
 
+const FI = { 'notification-monitor': 'bell', 'per-app-control': 'apps', 'local-history': 'lock', diagnostics: 'battery', 'phone-guides': 'phone', 'restart-recovery': 'restart', languages: 'globe', themes: 'palette' };
 const shot = (s, i) => `<figure class="shot"><button class="frame" data-full="/assets/img/screens/${s.file}.jpg" aria-label="Enlarge: ${s.title}"><img src="/assets/img/screens/${s.file}-sm.jpg" alt="NEXGUARD ${s.title} screen" width="360" height="760" loading="${i < 3 ? 'eager' : 'lazy'}"></button><figcaption><b>${s.title}</b>${s.caption}</figcaption></figure>`;
 const brands = phones.map(p => `<a href="/phones/${p.id}/">${p.name}</a>`).join('');
 const G = {
@@ -21,6 +22,7 @@ const G = {
   ogimg: `${URL}/assets/img/icon-512.png`,
   shotsCarousel: shots.map(shot).join(''),
   shotsGrid: shots.map(shot).join(''),
+  featureCards: feats.map(f => `<a class="fcard" href="/features/${f.id}/"><span class="fi">${icon(FI[f.id] || 'check')}</span><h3>${f.name}</h3><p>${f.summary}</p><span class="pill st-${f.status}">${f.status}</span></a>`).join(''),
   featureRows: feats.map(f => `<li><a href="/features/${f.id}/"><b>${f.name}</b><span>${f.summary}</span></a><span class="pill st-${f.status}">${f.status}</span></li>`).join(''),
   marquee: brands + brands.replace(/<a /g, '<a aria-hidden="true" tabindex="-1" '),
   brandBig: phones.map(p => `<a href="/phones/${p.id}/">${p.name}<small>${p.tested ? "Matches the developer's phone" : 'General guidance'}</small></a>`).join(''),
@@ -46,7 +48,7 @@ function out(file, m, body) {
   if (path !== '/') head = head.replace(`href="${path}"`, `href="${path}" aria-current="page"`);
   const css = (m.css ? m.css.split(' ') : []).map(c => `<link rel="stylesheet" href="/assets/css/${c}.css">`).join('');
   const pagejs = (m.js ? m.js.split(' ') : []).map(j => `<script type="module" src="/assets/js/${j}.js"></script>`).join('');
-  const html = inc(R(`${S}/layouts/base.html`, 'utf8'), { title: m.title, desc: m.desc, canon, pagecss: css, pagejs, content: body, header: head });
+  const html = inc(R(`${S}/layouts/base.html`, 'utf8'), { title: m.title, desc: m.desc, canon, pagecss: css, pagejs, scene: m.scene || 'sub', content: body, header: head });
   const f = file || `${D}${path}index.html`; mkdirSync(f.replace(/\/[^/]*$/, ''), { recursive: true }); writeFileSync(f, html);
   if (!file) urls.push(path);
 }
@@ -55,7 +57,7 @@ for (const f of readdirSync(`${S}/pages`)) { const { m, body } = parse(inc(R(`${
 for (const f of feats) { const { m, body } = parse(inc(R(`${S}/templates/feature.html`, 'utf8'), { ...f, details: li(f.details) })); out(null, m, body); }
 phones.forEach((p, i) => {
   const n = phones[(i + 1) % phones.length];
-  const c = { ...p, steps: `<ol>${p.steps.map(x => `<li>${esc(x)}</li>`).join('')}</ol>`, status: p.tested ? `<span class="pill st-Available">Matches the developer's phone</span>` : '<span class="pill st-Soon">General guidance, not tested by the developer</span>', noteHtml: p.note ? `<p class="notice">${p.note}</p>` : '', nextId: n.id, nextName: n.name };
+  const c = { ...p, steps: `<ol class="steps">${p.steps.map((x, k) => `<li><span class="n">${k + 1}</span><p>${esc(x)}</p></li>`).join('')}</ol>`, status: p.tested ? `<span class="pill st-Available">Matches the developer's phone</span>` : '<span class="pill st-Soon">General guidance, not tested by the developer</span>', noteHtml: p.note ? `<p class="notice">${p.note}</p>` : '', nextId: n.id, nextName: n.name };
   const { m, body } = parse(inc(R(`${S}/templates/phone.html`, 'utf8'), c)); out(null, m, body);
 });
 if (URL) { writeFileSync(`${D}/sitemap.xml`, `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls.map(u => `<url><loc>${URL}${u}</loc></url>`).join('')}</urlset>`); writeFileSync(`${D}/robots.txt`, `User-agent: *\nAllow: /\nSitemap: ${URL}/sitemap.xml\n`); }

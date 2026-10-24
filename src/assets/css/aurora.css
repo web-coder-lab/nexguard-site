@@ -6,3 +6,5 @@
 .aurora i:nth-child(3){left:18vmax;bottom:-36vmax;background:radial-gradient(circle,var(--a3),transparent 62%);animation-duration:52s;animation-delay:-24s;opacity:.22}
 @keyframes drift{to{transform:translate3d(8vmax,5vmax,0) scale(1.12)}}
 [data-theme=light] .aurora i{opacity:.14}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.gl-on .aurora i{opacity:.16}[data-theme=light].gl-on .aurora i{opacity:.1}

@@ -1,5 +1,5 @@
 /* Release page (GitHub Releases inspired) */
-.rel{background:var(--s1);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.rel{border:1.5px solid transparent;border-radius:var(--r);overflow:hidden;background:linear-gradient(var(--s1),var(--s1)) padding-box,conic-gradient(from var(--ang,0deg),var(--a),var(--a2),var(--a3),var(--a)) border-box;animation:spinb 9s linear infinite}
 .rel-h{display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:22px 26px;border-bottom:1px solid var(--line)}.rel-h h2{margin:0;font-size:1.6rem}
 .tagch{display:inline-flex;gap:6px;align-items:center;font:600 .88rem var(--mono);color:var(--m);background:var(--s2);border-radius:8px;padding:3px 10px}
 .rel-b{padding:22px 26px}.rel-b ul{margin:.2em 0 0}
